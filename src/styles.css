@@ -124,17 +124,50 @@ h1 {
   --radius: 0px 0px 0px 4px;
 }
 
-.cell.correct {
+.keyboardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.keyboardRow {
+  display: flex;
+  gap: 4px;
+}
+
+.keyboardCell {
+  color: darkslategray;
+  background: lightgray;
+  border-radius: 20%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restartButton {
+  border-radius: 4px;
+  width: fit-content;
+  padding: 8px;
+}
+
+.cell.correct,
+.keyboardCell.correct {
   background: var(--color-success);
   border-color: var(--color-success);
   color: white;
 }
-.cell.incorrect {
+.cell.incorrect,
+.keyboardCell.incorrect {
   background: var(--color-gray-300);
   border-color: var(--color-gray-300);
   color: white;
 }
-.cell.misplaced {
+.cell.misplaced,
+.keyboardCell.misplaced,
+.restartButton {
   background: var(--color-warning);
   border-color: var(--color-warning);
   color: white;
